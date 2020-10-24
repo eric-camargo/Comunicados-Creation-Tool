@@ -1,34 +1,54 @@
 import React from 'react';
 
+import * as ElementTypes from '../../constants/ElementTypes';
+import classes from './DocElements.module.css';
 
 const Snippet = (props) => {
   return (
-  <h1>SNIPPET</h1>
+    <>
+      <label for='snippet'>Snippet:</label>
+      <input id='snippet' type='text' placeholder='Digite o Snippet'/>
+    </>
 )};
 
 const LongTitle = (props) => {
   return (
-  <h1>LongTitle</h1>
+    <>
+      <label for='longTitle'>Título Longo:</label>
+      <input id='longTitle' type='text' placeholder='Digite o Título Longo'/>
+    </>
 )};
 
 const LongDescription = (props) => {
   return (
-  <h1>LongDescription</h1>
+    <>
+    <label for='longDescription'>Descrição Longa:</label>
+    <textarea id='longDescription' placeholder='Digite o Descrição Longa'/>
+  </>
 )};
 
 const Title = (props) => {
   return (
-  <h1>Title</h1>
+    <>
+      <label>Título:</label>
+      <input type='text' placeholder='Digite o Título'/>
+    </>
 )};
 
 const Subtitle = (props) => {
   return (
-  <h1>Subtitle</h1>
+    <>
+      <label>Subtítulo:</label>
+      <input type='text' placeholder='Digite o Subtítulo'/>
+    </>
 )};
 
 const Text = (props) => {
   return (
-  <h1>Text</h1>
+    <>
+    <label>Texto:</label>
+    <textarea placeholder='Digite o Texto'/>
+  </>
 )};
 
 const Separator = (props) => {
@@ -63,7 +83,10 @@ const Connection = (props) => {
 
 const Link = (props) => {
   return (
-  <h1>Link</h1>
+    <>
+      <label>Link Externo:</label>
+      <input type='url' placeholder='Digite o Link Externo'/>
+    </>
 )};
 
 const Resource = (props) => {
@@ -73,7 +96,10 @@ const Resource = (props) => {
 
 const CustomField = (props) => {
   return (
-  <h1>CustomField</h1>
+    <>
+      <label>Custom Field:</label>
+      <input type='text' placeholder='Digite o Custom Field'/>
+    </>
 )};
 
 const itemDefiner = (props) => {
@@ -81,49 +107,49 @@ const itemDefiner = (props) => {
   let item = null;
 
   switch (props.docType) {
-    case ('snippet'):
+    case (ElementTypes.SNIPPET):
       item = Snippet(props);
       break;
-    case ('longTitle'):
+    case (ElementTypes.LONGTITLE):
       item = LongTitle(props);
       break;
-    case ('longDescription'):
+    case (ElementTypes.LONGDESCRIPTION):
       item = LongDescription(props);
       break;
-    case ('title'):
+    case (ElementTypes.TITLE):
       item = Title(props);
       break;
-    case ('subtitle'):
+    case (ElementTypes.SUBTITLE):
       item = Subtitle(props);
       break;
-    case ('text'):
+    case (ElementTypes.TEXT):
       item = Text(props);
       break;
-    case ('separator'):
+    case (ElementTypes.SEPARATOR):
       item = Separator(props);
       break;
-    case ('photo'):
+    case (ElementTypes.PHOTO):
       item = Photo(props);
       break;
-    case ('video'):
+    case (ElementTypes.VIDEO):
       item = Video(props);
       break;
-    case ('audio'):
+    case (ElementTypes.AUDIO):
       item = Audio(props);
       break;
-    case ('gallery'):
+    case (ElementTypes.GALLERY):
       item = Gallery(props);
       break;
-    case ('connection'):
+    case (ElementTypes.CONNECTION):
       item = Connection(props);
       break;
-    case ('link'):
+    case (ElementTypes.LINK):
       item = Link(props);
       break;
-    case ('resource'):
+    case (ElementTypes.RESOURCE):
       item = Resource(props);
       break;
-    case ('custom'):
+    case (ElementTypes.CUSTOM):
       item = CustomField(props);
       break;
     default:
@@ -134,7 +160,7 @@ const itemDefiner = (props) => {
 
 
 const DocElements = (props) => (
-  <div>
+  <div className={classes.Item}>
     {itemDefiner(props)}
   </div>
   )

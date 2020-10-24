@@ -1,0 +1,15 @@
+export const LONGTITLE = 'Long Title';
+export const LONGDESCRIPTION = 'Long Description';
+export const SNIPPET = 'Snippet';
+export const TITLE = 'Title';
+export const SUBTITLE = 'Subtitle';
+export const TEXT = 'Text';
+export const SEPARATOR = 'Separator';
+export const PHOTO = 'Photo';
+export const VIDEO = 'Video';
+export const AUDIO = 'Audio';
+export const GALLERY = 'Gallery';
+export const CONNECTION = 'Connection';
+export const LINK = 'External Link';
+export const RESOURCE = 'Resource';
+export const CUSTOM = 'Custom Field';

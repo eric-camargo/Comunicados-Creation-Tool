@@ -2,20 +2,22 @@ import React from 'react';
 
 import classes from './ElementAddButtons.module.css';
 import ElementAddButton from './ElementAddButton/ElementAddButton';
+import * as ElementLabels from '../../constants/ElementLabels';
+import * as ElementTypes from '../../constants/ElementTypes';
 
 const controls = [
-  { label: 'Title', type: 'title' },
-  { label: 'Subtitle', type: 'subtitle' },
-  { label: 'Text', type: 'text' },
-  { label: 'Separator', type: 'separator' },
-  { label: 'Photo', type: 'photo' },
-  { label: 'Video', type: 'video' },
-  { label: 'Audio', type: 'audio' },
-  { label: 'Gallery', type: 'gallery' },
-  { label: 'Connection', type: 'connection' },
-  { label: 'External Link', type: 'link' },
-  { label: 'Resource', type: 'resource' },
-  { label: 'Custom Field', type: 'custom' }
+  { label: ElementLabels.TITLE, type: ElementTypes.TITLE },
+  { label: ElementLabels.SUBTITLE, type: ElementTypes.SUBTITLE },
+  { label: ElementLabels.TEXT, type: ElementTypes.TEXT },
+  { label: ElementLabels.SEPARATOR, type: ElementTypes.SEPARATOR },
+  { label: ElementLabels.PHOTO, type: ElementTypes.PHOTO },
+  { label: ElementLabels.VIDEO, type: ElementTypes.VIDEO },
+  { label: ElementLabels.AUDIO, type: ElementTypes.AUDIO },
+  { label: ElementLabels.GALLERY, type: ElementTypes.GALLERY },
+  { label: ElementLabels.CONNECTION, type: ElementTypes.CONNECTION },
+  { label: ElementLabels.LINK, type: ElementTypes.LINK },
+  { label: ElementLabels.RESOURCE, type: ElementTypes.RESOURCE },
+  { label: ElementLabels.CUSTOM, type: ElementTypes.CUSTOM }
 ];
 
 

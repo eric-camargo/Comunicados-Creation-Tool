@@ -8,7 +8,7 @@ class DocBuilder extends Component {
 
   render () {
     return (
-      <div className={classes.DocBuilder}>
+      <form className={classes.DocBuilder}>
         {this.props.elementsArray.map(el => (
           <DocElements
             key={el.id}
@@ -17,7 +17,7 @@ class DocBuilder extends Component {
             changed={(event) => this.contentChangeHandler(event, el.id)} />
           ))}
 
-      </div>
+      </form>
     )
   }
 }
