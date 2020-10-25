@@ -4,6 +4,8 @@ import classes from './ElementAddButtons.module.css';
 import ElementAddButton from './ElementAddButton/ElementAddButton';
 import * as ElementLabels from '../../constants/ElementLabels';
 import * as ElementTypes from '../../constants/ElementTypes';
+import ActionButton from '../UI//Buttons/ActionButton';
+
 
 const controls = [
   { label: ElementLabels.TITLE, type: ElementTypes.TITLE },
@@ -22,14 +24,28 @@ const controls = [
 
 
 const ElementAddButtons = (props) => (
-  <div className={classes.ElementAddButtons}>
-    {controls.map(ctrl => (
-      <ElementAddButton
-        key={ctrl.label}
-        label={ctrl.label}
-        added={() => props.elementAdded(ctrl.type)} />
-    ))}
-  </div>
+  <>
+    <div className={classes.ElementAddButtons}>
+      {controls.map(ctrl => (
+        <ElementAddButton
+          key={ctrl.label}
+          label={ctrl.label}
+          added={() => props.elementAdded(ctrl.type)} />
+      ))}
+    </div>
+    <div>
+      <ActionButton
+        disabled={false}
+        clicked={() => props.sendClicked()}
+        btnType='Send'>Send</ActionButton>
+    </div>
+    <div>
+      <ActionButton
+        disabled={false}
+        clicked={() => props.clearClicked()}
+        btnType='Clear'>Clear</ActionButton>
+    </div>
+  </>
 );
 
 export default ElementAddButtons;

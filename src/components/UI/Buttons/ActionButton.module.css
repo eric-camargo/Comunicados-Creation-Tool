@@ -1,0 +1,33 @@
+.Insert {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 10px 25px;
+  margin: 8px 10px;
+  width: 150px;
+  outline: none;
+  display: block;
+  font: inherit;
+  color: rgb(0, 38, 88);
+  background-color: rgb(181, 216, 255);
+  align-items: center;
+  cursor: pointer;
+}
+
+.Clear, .Send {
+  border: none;
+  border-radius: 1.2rem;
+  color: white;
+  padding: 15px 50px;
+  font: inherit;
+  font-size: 28px;
+  margin-top: 20px;
+}
+
+.Send {
+  background-color: rgb(27, 175, 46);
+  margin-top: 20px;
+}
+
+.Clear {
+  background-color: rgb(126, 22, 22);
+}

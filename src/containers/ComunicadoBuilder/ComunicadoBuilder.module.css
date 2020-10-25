@@ -1,0 +1,42 @@
+body {
+  background-color: #214f78;
+  text-align: center;
+}
+
+.Main {
+  display: fixed;
+  margin: 40px 300px 40px 500px;
+  max-height: 650px;
+  overflow-y: scroll;
+  overflow: auto;
+
+}
+
+
+.ElementAddButtons {
+  position: fixed;
+  top: 40px;
+  left: 100px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.DocBuilder {
+  width: 95%;
+  align-items: center;
+  background-color: rgb(181, 172, 255);
+  border-radius: 25px;
+}
+
+.Send {
+  position:fixed;
+  left:150px;
+  bottom:50px;
+
+}

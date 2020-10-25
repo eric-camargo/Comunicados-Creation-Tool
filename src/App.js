@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
 
-import ComunicadoBuilder from './containers/ComunicadoBuilder';
+import ComunicadoBuilder from './containers/ComunicadoBuilder/ComunicadoBuilder';
 
 
 function App() {
